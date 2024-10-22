@@ -6,14 +6,14 @@ def ingresar_puntuacion_comentario():
 
         if point.isdecimal():
             point = int(point)
-            if point <= 0 or point > 5:  # Verifica si está entre 1 y 5
+            if point <= 0 or point > 5: 
                 print('Por favor, introduzca un valor entre 1 y 5')
             else:
                 print('Por favor, introduzca un comentario')
                 comment = input()
                 post = f'punto: {point} comentario: {comment}'
                 
-                # Guardar la puntuación y comentario en el archivo
+               
                 with open("data.txt", 'a') as file_pc:
                     file_pc.write(f'{ post } \n')
                 break
